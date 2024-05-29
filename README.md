@@ -1,16 +1,65 @@
-## Hi there 👋
+# Hi, I'm @resu 👋
 
-<!--
-**resu/resu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## profile.ts
 
-Here are some ideas to get you started:
+```typescript
+import { Profile } from './profileTypes';
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+const resu: Profile = {
+  availability: {
+    timezone: "America/Los_Angeles",
+    daysAvailable: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    workingHours: { start: "08:00", end: "17:00" },
+    breakTime: { start: "12:00", end: "13:00" }
+  },
+  skills: {
+    languages: ["C++", "JavaScript", "TypeScript", "Go", "Rust"],
+    frameworks: ["React", "Node", "Vite", "Tauri"],
+    frontend: ["MUI", "Tailwind", "Shadcn"],
+    architecture: ["microservices", "cloud-native", "event-driven"],
+    databases: ["PostgreSQL", "Redis"],
+    devops: ["Prometheus", "Grafana", "GitHub Actions", "Docker", "K8s"],
+    cloud: ["AWS", "Digital Ocean", "Cloudflare"]
+  },
+  workspace: {
+    editor: "VSCode",
+    theme: "Dracula",
+    remote: true,
+    fuelledBy: "☕"
+  },
+};
+```
+
+## profileTypes.ts
+
+```typescript
+interface Availability {
+  timezone: string;
+  daysAvailable: string[];
+  workingHours: { start: string; end: string };
+  breakTime: { start: string; end: string };
+}
+
+interface Skills {
+  languages: string[];
+  frameworks: string[];
+  frontend: string[];
+  architecture: string[];
+  databases: string[];
+  devops: string[];
+  cloud: string[];
+}
+
+interface Workspace {
+  editor: string;
+  theme: string;
+  remote: boolean;
+  fuelledBy: string;
+}
+
+export interface Profile {
+  availability: Availability;
+  skills: Skills;
+  workspace: Workspace;
+}
+```
