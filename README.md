@@ -14,11 +14,14 @@ const resu: Profile = {
   },
   skills: {
     languages: ["C++", "JavaScript", "TypeScript", "Go", "Rust"],
-    frameworks: ["React", "Node", "Vite", "Tauri"],
+    frameworks: ["React", "Node"],
+    bundlers: ["Vite", "Tauri"],
     frontend: ["MUI", "Tailwind", "Shadcn"],
     architecture: ["microservices", "cloud-native", "event-driven"],
-    databases: ["PostgreSQL", "Redis"],
-    devops: ["Prometheus", "Grafana", "GitHub Actions", "Docker", "K8s"],
+    databases: ["PostgreSQL"],
+    caching: ["Redis"],
+    monitoring: ["Prometheus", "Grafana"],
+    devops: ["GitHub Actions", "Docker", "K8s", "Terraform"],
     cloud: ["AWS", "Digital Ocean", "Cloudflare"]
   },
   workspace: {
@@ -42,10 +45,14 @@ interface Availability {
 
 interface Skills {
   languages: string[];
+  runtimes: string[];
   frameworks: string[];
+  bundlers: string[];
   frontend: string[];
   architecture: string[];
   databases: string[];
+  caching: string[];
+  monitoring: string[];
   devops: string[];
   cloud: string[];
 }
